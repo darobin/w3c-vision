@@ -6,7 +6,6 @@
   <script src="https://www.w3.org/Tools/respec/respec-w3c" defer class="remove"></script>
   <title>W3C Values & Vision</title>
   <script class="remove">
-    // All config options at https://respec.org/docs/
     var respecConfig = {
       specStatus: 'base',
       editors: [{
@@ -17,6 +16,18 @@
         w3cid: 34327,
       }],
       shortName: 'w3c-vision',
+      github: {
+        repoURL: 'https://github.com/darobin/w3c-vision',
+        branch: 'main',
+      },
+      edDraftURI: 'https://darobin.github.io/w3c-vision/',
+      localBiblio: {
+        'Creating-Capabilities': {
+          title: 'Creating Capabilities',
+          href: 'https://bookshop.org/p/books/creating-capabilities-the-human-development-approach-martha-c-nussbaum/6690885?ean=9780674072350',
+          authors: ['Martha Nussbaum'],
+        },
+      },
       postProcess: [
         () => {
           for (let dt of document.querySelectorAll('.head details dt')) {
@@ -122,14 +133,7 @@
 
 
 <!--
-  Martha Nussbaum, Creating Capabilities, https://bookshop.org/p/books/creating-capabilities-the-human-development-approach-martha-c-nussbaum/6690885?ean=9780674072350
 
-  - the scope and nature of the web are such that a simple declaration of principles is insufficient
-  - this is how we do vision when the whole world is the scope
-  - foundations
-    - RFC8890: collaborative computing in the pursuit of greater user agency, defined as capabilities, and include the collective aspects as Apolito+web community
-    - subsidiarity: delegate to expert groups that do the work
-    - implementability (HR must work)
   - change
     - changing existing principles: talk to the right groups
     - adding a new principle area: write it up in sufficient detail, get a group together to support consensus, and prove there is interest by having a working HR for it
@@ -143,25 +147,62 @@
 
 
   <!--
-    Technical decisions do not happen in a vacuum. The decisions we make in shaping technology have consequences well outside the purely technical realm and while the bulk of design choices that make up web standards may have been motivated by reasons that are essentially technical in nature, we regularly need to adjudicate and to drive outcomes by reference to more general and more foundational principles with a broader impact than technology alone. Making this principled framework explicit empowers us to reference it more effectively when it needs to be called upon as well as to criticise and improve it when it falls short of our expectations.
-However, we should not mistake the W3C community for a group of philosophers and legal scholars. We would be poorly served by a set of principles that are too lofty, too abstract, or that require too much conceptual engineering to apply. This document is built on a simple tenet: the W3C’s vision and principles should be held to the same criteria as its standards. They should be precise and testable, they should be interoperable and independently implementable.
-In concrete terms, our principles are embodied in what we do and don’t consider desirable in a web standard; rather than abstract ideals they are concrete goals and constraints that are implemented in the standards we set. Specifically, the beating heart of our principles is the horizontal review system. We reject the notion that a small centralised group could be granted the power to decide which principles support standards that belong to the whole web community. Instead, we rely on subsidiarity — the principle according to which central authority should only perform tasks which can’t be performed at a more local level — and delegate the responsibility for concrete principles to specific horizontal review groups.
-What we expect from horizontal review groups is that they develop concrete principles for their area and the expertise to apply these principles across the whole of the web’s technical stack, in collaboration with their community. The web should be shaped by the cooperation of diverse voices with different life stories and deep but varied expertise; horizontal review groups are a direct and workable implementation of this view. The only task that needs to be performed by a more central authority is that of organising this cooperation.
-Nothing is a web principle that isn’t managed in horizontal review, and then only if it is shown to apply across different standards. Changes to our principles are carried out as changes to horizontal review — a living process undergoing constant refinement.
-In concrete terms, we need review groups for:
-accessibility,
-internationalisation,
-privacy, and
-security.
-The TAG should be tasked with the coordination of these groups. It should gather the relevant documents and questionnaires into a single, convenient, unified view. Additionally, the TAG should not be in charge of architectural review as that represents too much work for a small elected body. Rather, it should convene an additional architecture review group staffed from the broader community. The TAG would maintain its remit in producing documents intended to cut across the web’s architecture.
-When a new problem area is recognised, a new horizontal review group can be established by the Membership according to a joint recommendation of the TAG and AB. The bar for such a group must be high, notably it should only be established based on a draft document clearly detailing review principles, with multiple examples of specifications which it could have directly improved through review, and with strong evidence that there are enough people to work on reviews.
-Review groups should be represented on FO Councils.
-The AB’s role with respect to the W3C’s vision and principles should be:
-To uphold RFC 8890.
-To enforce subsidiarity.
-To identify new problems that may warrant changes to the horizontal review structure.
+    Technical decisions do not happen in a vacuum. The decisions we make in shaping technology have consequences
+    well outside the purely technical realm and while the bulk of design choices that make up web standards may
+    have been motivated by reasons that are essentially technical in nature, we regularly need to adjudicate and
+    to drive outcomes by reference to more general and more foundational principles with a broader impact than
+    technology alone. Making this principled framework explicit empowers us to reference it more effectively when
+    it needs to be called upon as well as to criticise and improve it when it falls short of our expectations.
 
+    However, we should not mistake the W3C community for a group of philosophers and legal scholars. We would be
+    poorly served by a set of principles that are too lofty, too abstract, or that require too much conceptual
+    engineering to apply. This document is built on a simple tenet: the W3C’s vision and principles should be
+    held to the same criteria as its standards. They should be precise and testable, they should be
+    interoperable and independently implementable.
 
+    In concrete terms, our principles are embodied in what we do and don’t consider desirable in a web standard;
+    rather than abstract ideals they are concrete goals and constraints that are implemented in the standards we
+    set. Specifically, the beating heart of our principles is the horizontal review system. We reject the notion
+    that a small centralised group could be granted the power to decide which principles support standards that
+    belong to the whole web community. Instead, we rely on subsidiarity — the principle according to which
+    central authority should only perform tasks which can’t be performed at a more local level — and delegate
+    the responsibility for concrete principles to specific horizontal review groups.
+
+    What we expect from horizontal review groups is that they develop concrete principles for their area and
+    the expertise to apply these principles across the whole of the web’s technical stack, in collaboration
+    with their community. The web should be shaped by the cooperation of diverse voices with different life
+    stories and deep but varied expertise; horizontal review groups are a direct and workable implementation
+    of this view. The only task that needs to be performed by a more central authority is that of organising
+    this cooperation.
+
+    Nothing is a web principle that isn’t managed in horizontal review, and then only if it is shown to apply
+    across different standards. Changes to our principles are carried out as changes to horizontal review — a
+    living process undergoing constant refinement.
+
+    In concrete terms, we need review groups for:
+      accessibility,
+      internationalisation,
+      privacy, and
+      security.
+
+    The TAG should be tasked with the coordination of these groups. It should gather the relevant documents
+    and questionnaires into a single, convenient, unified view. Additionally, the TAG should not be in charge
+    of architectural review as that represents too much work for a small elected body. Rather, it should convene
+    an additional architecture review group staffed from the broader community. The TAG would maintain its
+    remit in producing documents intended to cut across the web’s architecture.
+
+    When a new problem area is recognised, a new horizontal review group can be established by the Membership
+    according to a joint recommendation of the TAG and AB. The bar for such a group must be high, notably it
+    should only be established based on a draft document clearly detailing review principles, with multiple
+    examples of specifications which it could have directly improved through review, and with strong
+    evidence that there are enough people to work on reviews.
+
+    Review groups should be represented on FO Councils.
+
+    The AB’s role with respect to the W3C’s vision and principles should be:
+      To uphold RFC 8890.
+      To enforce subsidiarity.
+      To identify new problems that may warrant changes to the horizontal review structure.
    -->
 </body>
 </html>
